@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="rocket.js" defer></script>
+</head>
+
+    <!-- Realistic Rocket SVG -->
+    <svg class="rocket" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 300">
+        <defs>
+            <linearGradient id="flame-gradient">
+                <stop offset="0%" stop-color="#FF4500"/>
+                <stop offset="50%" stop-color="#FF6347"/>
+                <stop offset="100%" stop-color="#FF8C00"/>
+            </linearGradient>
+        </defs>
+
+        <!-- Rocket Body -->
+        <path class="rocket-body" d="M75 20 
+            L50 280 
+            L100 280 
+            Z" />
+
+        <!-- Rocket Windows -->
+        <circle class="rocket-window" cx="75" cy="80" r="15"/>
+        <circle class="rocket-window" cx="75" cy="120" r="10"/>
+
+        <!-- Rocket Fins -->
+        <path fill="#333" d="M50 280 L20 300 L50 300 Z"/>
+        <path fill="#333" d="M100 280 L130 300 L100 300 Z"/>
+
+        <!-- Rocket Flame -->
+        <path class="rocket-flame" d="M75 290 
+            L60 320 
+            L90 320 
+            Z" />
+    </svg>
+
+    <!--Landing Page-->
+    <section class="landing-page">
+        <div class="wrapper">
+            <div class="flex-content">
+                <h1 class="vacation-heading">Welcome To Master Quiz</h1>
+                <p class="sub-heading">Test Your Knowledge, Challenge Your Limits</p>
+                <a href="#quiz-packages" class="btn">Start Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!--header section-->
+    <header class="quiz-header" id="quiz-header">
+        <h1 class="heading">Master Quiz</h1>
+    </header>
+
+    <nav class="main-nav">
+        <a href="#">Home</a>
+        <a href="#quiz-packages">Quiz</a>
+        <a href="#Performer">Top Performers</a>
+        <a href="#notes">Notes</a>
+    </nav>
+
+
+    <section class="quiz-packages-section" id="quiz-packages">
+        <h1 class="quiz-heading" style="margin-bottom: 30px;">Coding Quiz</h1>
+        
+        <p class="quiz-text" style="margin-top: 30px;">Code your own quiz sensation!
+            Embark on a transformative learning journey with our cutting-edge Coding Quiz Platform, designed to revolutionize how programmers learn, practice, and master their skills. This innovative app is more than just a quiz tool – it's a comprehensive learning ecosystem that empowers developers at every stage of their coding adventure.
+            Our flexible framework provides an immersive experience that goes beyond traditional learning methods. Whether you're a beginner taking your first steps in programming or an experienced developer looking to sharpen your skills, our platform adapts to your unique learning needs. With meticulously crafted quizzes spanning multiple programming languages and technologies, you'll gain deep insights and practical knowledge.</p>
+        
+        <div class="package-wrapper">
+            <div class="package-card">
+                <img src=".//images/java.jpg" alt="">
+                <p class="card-heading">Java</p>
+                <p class="card-text">Master Java programming through interactive quizzes that challenge and enhance your coding skills.</p>
+                <p class="card-heading">500₹</p>
+                <button class="btn" onclick="startQuiz('java')">Take Quiz</button>
+            </div>
+       
+            <div class="package-card">  
+                <img src=".//images/python.jpg" alt="">
+                <p class="card-heading">Python</p>
+                <p class="card-text">Unlock Python's power through engaging quizzes that transform your programming knowledge and skills.</p>
+                <p class="card-heading">400₹</p>
+                <button class="btn" onclick="startQuiz('python')">Take Quiz</button>
+            </div>
+            <div class="package-card">
+                <img src=".//images/js.png" alt="">
+                <p class="card-heading">JavaScript</p>
+                <p class="card-text">Explore JavaScript's dynamic world through interactive quizzes that sharpen your web development skills.</p>
+                <p class="card-heading">300₹</p>
+                <button class="btn"onclick="startQuiz('JavaScript')">Take Quiz</button>
+            </div>
+            <div class="package-card">
+                <img src=".//images/net.png" alt="">
+                <p class="card-heading">DotNet</p>
+                <p class="card-text">DotNet coding quiz package offers interactive quizzes, enhancing learning through coding challenges.</p>
+                <p class="card-heading">200₹</p>
+                <button class="btn"onclick="startQuiz('DotNet')">Take Quiz</button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="Performer-quiz-section" id="Performer">
+        <h1 class="quiz-heading" style="margin-bottom: 40px;">Top Performer</h1>
+        <p class="quiz-text">At our Coding Quiz Platform, we celebrate the extraordinary journey of learning and excellence. Our top performers are more than just high scorers; they are passionate innovators who demonstrate remarkable skill, unwavering dedication, and a profound commitment to continuous learning. These exceptional individuals have not only mastered complex programming concepts but have also shown the ability to apply their knowledge across diverse technological landscapes.
+         Their achievements serve as a beacon of inspiration, motivating other developers to embrace challenges, expand their knowledge, and transform their coding potential into tangible success.</p>
+        <div class="image-card"style="margin-bottom: 80px;">
+            <img src=".//images/m1.jpg" alt="">
+            <img src=".//images/m2.jpg" alt="">
+            <img src=".//images/m3.jpg" alt="">
+            <img src=".//images/m4.jpg" alt="">
+            <img src=".//images/m5.jpg" alt="">
+            <img src=".//images/m6.jpg" alt="">
+        </div>
+        
+    </section>
+
+
+    <section class="notes-section" id="notes">
+        <h1 class="quiz-heading" style="margin-bottom: 40px;">Subject notes</h1>
+        <p class="quiz-text">This "Notes" section is a central location for your notes.
+            It's not just a quiz app; it's a learning platform!
+            Access helpful resources for studying and preparing.
+            Use our app to boost your coding skills and increase your understanding of coding!
+            A quiz app is the best way to grow your skill
+            Get ready to level up your skills."</p>
+        <div class="notes-div">
+            <div class="notes-wrapper">
+                <img src=".//images/java.jpg" alt="">
+            </div>
+            <div class="notes-wrapper">
+                <img src=".//images/compiler.png" alt="">
+            </div>
+            <div class="notes-wrapper">
+                <img src=".//images/spring.png" alt="">
+            </div>
+            <div class="notes-wrapper">
+                <img src=".//images/react.png" alt="">
+            </div>
+            <div class="notes-wrapper">
+                <img src=".//images/dev.jpg" alt="">
+            </div>
+            <div class="notes-wrapper">
+                <img src=".//images/python.jpg" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    
+
+    <footer class="footer-section">
+        <small>All Right Reserver</small>
+        <small>Developed  & Maintained By
+            <a href="https://www.linkedin.com/in/kalpeshp1" target="_blank">Kalpesh Pawara</a>
+        </small>
+    </footer>
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
